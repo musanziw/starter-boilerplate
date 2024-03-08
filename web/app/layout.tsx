@@ -10,9 +10,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Fikiri | home",
-  description:
-    "Fikiri est une plateforme web qui vise à cartographier les solutions locales en République Démocratique du Congo pour accélérer l'atteinte des Objectifs de Développement Durable (ODD).",
+  title: "Starter | home",
+  description: "Starter boilerplate with Next.js, Tailwind CSS, TypeScript",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

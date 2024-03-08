@@ -1,18 +1,18 @@
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 import Topbar from "@/core/utils/Topbar";
 import LoginForm from "./Form";
 
 export const metadata: Metadata = {
-    title: "Fikiri | Login",
+  title: "Starter | Login",
 };
 
 const Login = () => {
-    return (
-        <div className={"relative"}>
-            <Topbar/>
-            <LoginForm/>
-        </div>
-    );
-}
+  return (
+    <div className={"relative"}>
+      <Topbar />
+      <LoginForm />
+    </div>
+  );
+};
 
-export default Login
+export default Login;
