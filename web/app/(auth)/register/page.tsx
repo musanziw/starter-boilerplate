@@ -1,16 +1,18 @@
 import Topbar from "@/core/utils/Topbar";
-import type { Metadata } from "next";
-import { Form } from "./Form";
+import type {Metadata} from "next";
+import RegisterForm from "./Form";
 
 export const metadata: Metadata = {
-  title: "Fikiri | Register",
+    title: "Fikiri | Register",
 };
 
-export default function Register() {
-  return (
-    <div className={"relative"}>
-      <Topbar />
-      <Form />
-    </div>
-  );
+const Register = () => {
+    return (
+        <div className={"relative"}>
+            <Topbar/>
+            <RegisterForm/>
+        </div>
+    );
 }
+
+export default Register

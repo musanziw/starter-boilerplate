@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import useStore from "@/core/hooks/useStore";
 import { api } from "@/core/config/api";
@@ -13,7 +12,7 @@ type Link = {
   isShown: boolean;
 };
 
-export default function Topbar() {
+const Topbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const pathname: string = usePathname();
   const router = useRouter();
@@ -57,7 +56,7 @@ export default function Topbar() {
     },
     {
       name: trimName(user?.name || ""),
-      path: "/me",
+      path: "/profile",
       isShown: user !== null,
     },
   ];
@@ -66,7 +65,7 @@ export default function Topbar() {
     <header
       className={`fixed w-full text-gray-800 bg-white shadow-md px-10 py-4 z-10 flex items-center justify-between`}
     >
-      <Link href={"/"} className={"inline-block uppercase"} aria-label="logo">
+      <Link href={"/"} className={"inline-block"} aria-label="logo">
         Starter
       </Link>
       <div
@@ -122,4 +121,6 @@ export default function Topbar() {
       </div>
     </header>
   );
-}
+};
+
+export default Topbar;
